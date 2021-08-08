@@ -1,0 +1,380 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body,
+div,
+h1,
+h2,
+p,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.8;
+    font-size: 100%;
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrap {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/*ヘッッダー*/
+
+.header_in {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*ナビゲーション*/
+
+.nav {
+    display: flex;
+    font-size: 20px;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #333;
+    padding-left: 25px;
+}
+
+.mainimg {
+    background-image: url(../images/maingazou.jpg);
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    background-position: center center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.title {
+    color: #999;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 30px;
+}
+
+.title p .syou {
+    font-size: 20px;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+.int {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*.face img {
+    border-radius: 50%;
+}*/
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seiretu {
+    width: 30%;
+}
+
+h3 {
+    text-align: center;
+}
+
+figure {
+    text-align: center;
+}
+
+figure i {
+    font-size: 300%;
+    margin-bottom: 20px;
+}
+
+.wbox {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wbox_left {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.wbox_left a:hover {
+    opacity: 0.8;
+}
+
+.wbox_right {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.wbox_right p {
+    padding-bottom: 20px;
+}
+
+.dbox {
+    justify-content: space-between;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dtp {
+    display: flex;
+    max-width: 100%;
+    list-style: none;
+}
+
+.dtp img:hover {
+    opacity: 0.5;
+}
+
+.dtp li img {
+    box-shadow: 5px 5px 5px #999;
+}
+
+
+/*スライドショーの横矢印*/
+
+button {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.slide-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+}
+
+.prev-arrow {
+    left: -30px;
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 15px solid #113463;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.next-arrow {
+    right: 0;
+    width: 0;
+    height: 0;
+    border-right: 0 solid transparent;
+    border-left: 15px solid #113463;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact i {
+    margin-left: 5%;
+    font-size: 300%;
+    padding: 1.5%;
+    color: #fff;
+    border-radius: 15%;
+}
+
+.fa-instagram {
+    background-color: palevioletred;
+}
+
+.fa-twitter {
+    background-color: #2a98e0;
+}
+
+footer {
+    background-color: rgb(98, 151, 133);
+    font-size: 20px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#sentou {
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#sentou a {
+    font-size: 25px;
+    font-family: 'Viaoda Libre', cursive;
+    padding: 20px 10px;
+    display: block;
+    color: #36C;
+    text-align: center;
+}
+
+#sentou a:hover {
+    opacity: 0.75;
+}
+
+
+/*ウインドウ幅が1035px以下の場合*/
+
+@media(max-width:1035px) {
+    .wbox {
+        flex-direction: column;
+    }
+    .wbox_left {
+        text-align: center;
+    }
+    .wbox_left,
+    .wbox_right {
+        width: 100%;
+    }
+}
+
+
+/*ウインドウの幅が767px以下の場合*/
+
+@media(max-width:767px) {
+    .dbox {
+        flex-wrap: wrap;
+    }
+    .dtp {
+        width: 45%;
+    }
+    header {
+        text-align: center;
+    }
+    .header_in,
+    .nav {
+        flex-direction: column;
+    }
+    .nav li a {
+        padding-left: 0;
+    }
+    h1,
+    .nav li {
+        text-align: center;
+    }
+    .nav,
+    .dbox,
+    .about {
+        flex-direction: column;
+    }
+    .dtp,
+    .about_left,
+    .about_right {
+        width: 100%;
+    }
+    .int {
+        flex-direction: column-reverse;
+        text-align: center;
+        border-radius: 50%;
+    }
+    .dtp {
+        margin-bottom: 50px;
+    }
+    .dtp:last-child {
+        margin-bottom: 0;
+    }
+    nav span::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 150%;
+        content: "\f0c9";
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    nav span.line::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f00d";
+        position: absolute;
+        z-index: 20;
+    }
+    .nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .nav li {
+        padding-top: 80px;
+    }
+    .nav li::before {
+        content: "◆";
+        color: #999;
+        font-weight: bold;
+        padding-right: 5px;
+    }
+    ul {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .nav li a {
+        padding-left: 0;
+        color: #fff;
+    }
+    .res {
+        width: 100%;
+    }
+    button,
+    .slide-arrow,
+    .prev-arrow,
+    .next-arrow {
+        display: none;
+    }
+}
